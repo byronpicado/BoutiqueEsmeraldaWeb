@@ -7,6 +7,7 @@
   <meta name="description" content="Boutique de moda - Ropa elegante y casual" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- Encabezado -->
@@ -26,8 +27,8 @@
   <section id="inicio" class="hero">
     <div class="container hero-inner">
       <h2>Estilo que te define</h2>
-      <p>Descubre la nueva colección de ropa elegante y casual pensada para vos.</p>
-      <a href="#coleccion" class="btn">Ver colección</a>
+      <p>Descubre la nueva colección de ropa elegante y casual pensada para vos. Cada pieza combina comodidad y sofisticación.</p>
+      <a href="#coleccion" class="btn btn-hero">Ver colección</a>
     </div>
   </section>
 
@@ -35,24 +36,32 @@
   <section id="coleccion" class="container coleccion">
     <h3>Nuestra colección</h3>
     <div class="grid">
-      <!-- Tarjetas de ejemplo -->
       <div class="card">
         <img src="Vestidos.png" alt="Vestido elegante">
         <h4>Vestidos</h4>
-        <p>Diseños modernos y sofisticados.</p>
+        <p>Diseños modernos y sofisticados para cualquier ocasión.</p>
       </div>
       <div class="card">
-        <img src="camisas.webp" alt="Camisa de moda">
+        <img src="Camisas.jpeg" alt="Camisa de moda">
         <h4>Camisas</h4>
         <p>Comodidad y estilo en cada detalle.</p>
       </div>
       <div class="card">
         <img src="pantalones.jpeg" alt="Pantalón elegante">
         <h4>Pantalones</h4>
-        <p>Elegancia para toda ocasión.</p>
+        <p>Elegancia para tu día a día o eventos especiales.</p>
       </div>
-
-
+      <div class="card">
+        <img src="chaquetas.jpg" alt="Chaqueta de moda">
+        <h4>Chaquetas</h4>
+        <p>Acabados finos y cortes modernos.</p>
+      </div>
+      <div class="card">
+        <img src="accesorios.jpeg" alt="Accesorios">
+        <h4>Accesorios</h4>
+        <p>Detalles que marcan la diferencia.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Nosotros -->
@@ -60,6 +69,20 @@
     <div class="container">
       <h3>Sobre nosotros</h3>
       <p>Somos una boutique dedicada a ofrecer moda de alta calidad, combinando lo clásico con lo moderno para que siempre luzcas espectacular.</p>
+      <div class="valores">
+        <div class="valor">
+          <h4>Calidad</h4>
+          <p>Materiales seleccionados con atención a cada detalle.</p>
+        </div>
+        <div class="valor">
+          <h4>Estilo</h4>
+          <p>Diseños que resaltan tu personalidad.</p>
+        </div>
+        <div class="valor">
+          <h4>Confianza</h4>
+          <p>Una experiencia de compra segura y personalizada.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -74,21 +97,25 @@
         <input type="email" required>
       </label>
       <label>Mensaje
-        <textarea rows="4"></textarea>
+        <textarea rows="4" required></textarea>
       </label>
       <button type="submit" class="btn">Enviar</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Boutique Esmeralda - Todos los derechos reservados</p>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Boutique Esmeralda - Todos los derechos reservados</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
