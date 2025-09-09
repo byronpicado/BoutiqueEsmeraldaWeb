@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Boutique Elegancia</title>
+  <meta name="description" content="Boutique de moda - Ropa elegante y casual" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Boutique <span>Esmeralda</span></h1>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero principal -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <h2>Estilo que te define</h2>
+      <p>Descubre la nueva colección de ropa elegante y casual pensada para vos.</p>
+      <a href="#coleccion" class="btn">Ver colección</a>
+    </div>
+  </section>
+
+  <!-- Colección -->
+  <section id="coleccion" class="container coleccion">
+    <h3>Nuestra colección</h3>
+    <div class="grid">
+      <!-- Tarjetas de ejemplo -->
+      <div class="card">
+        <img src="Vestidos.png" alt="Vestido elegante">
+        <h4>Vestidos</h4>
+        <p>Diseños modernos y sofisticados.</p>
+      </div>
+      <div class="card">
+        <img src="camisas.webp" alt="Camisa de moda">
+        <h4>Camisas</h4>
+        <p>Comodidad y estilo en cada detalle.</p>
+      </div>
+      <div class="card">
+        <img src="pantalones.jpeg" alt="Pantalón elegante">
+        <h4>Pantalones</h4>
+        <p>Elegancia para toda ocasión.</p>
+      </div>
+
+
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="nosotros">
+    <div class="container">
+      <h3>Sobre nosotros</h3>
+      <p>Somos una boutique dedicada a ofrecer moda de alta calidad, combinando lo clásico con lo moderno para que siempre luzcas espectacular.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="container contacto">
+    <h3>Contacto</h3>
+    <form class="contact-form" onsubmit="alert('Este es un demo estático, no se envían datos.'); return false;">
+      <label>Nombre
+        <input type="text" required>
+      </label>
+      <label>Email
+        <input type="email" required>
+      </label>
+      <label>Mensaje
+        <textarea rows="4"></textarea>
+      </label>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Boutique Esmeralda - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
