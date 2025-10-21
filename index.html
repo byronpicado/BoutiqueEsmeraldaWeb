@@ -86,22 +86,57 @@
     </div>
   </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="container contacto">
-    <h3>Contacto</h3>
-    <form class="contact-form" onsubmit="alert('Este es un demo estático, no se envían datos.'); return false;">
-      <label>Nombre
-        <input type="text" required>
-      </label>
-      <label>Email
-        <input type="email" required>
-      </label>
-      <label>Mensaje
-        <textarea rows="4" required></textarea>
-      </label>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
+<!-- Contacto -->
+<section id="contacto" class="container contacto">
+  <h3>Contacto</h3>
+  <form id="contact-form" class="contact-form">
+    <label>Nombre
+      <input type="text" id="name" required>
+    </label>
+    <label>Email
+      <input type="email" id="email" required>
+    </label>
+    <label>Mensaje
+      <textarea id="message" rows="4" required></textarea>
+    </label>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+  <p id="response-message"></p>
+</section>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("contact-form");
+  const responseMsg = document.getElementById("response-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    responseMsg.textContent = "Enviando...";
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const text = await response.text();
+      responseMsg.textContent = text;
+      form.reset();
+    } catch (error) {
+      responseMsg.textContent = "Error al enviar el mensaje.";
+      console.error(error);
+    }
+  });
+</script>
 
 <!-- Footer -->
 <footer class="site-footer">
